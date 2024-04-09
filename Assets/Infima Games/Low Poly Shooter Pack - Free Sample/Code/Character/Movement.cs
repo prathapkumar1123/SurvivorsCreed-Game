@@ -23,6 +23,7 @@ namespace InfimaGames.LowPolyShooterPack
         [Header("Speeds")]
 
         [SerializeField]
+        private float jumpForce = 10.0f;
         private float speedWalking = 5.0f;
 
         [Tooltip("How fast the player moves while running."), SerializeField]
@@ -148,6 +149,15 @@ namespace InfimaGames.LowPolyShooterPack
             
             //Play Sounds!
             PlayFootstepSounds();
+            Jump();
+        }
+
+        void Jump()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                rigidBody.velocity = transform.up * jumpForce;
+            }
         }
 
         #endregion
@@ -176,9 +186,9 @@ namespace InfimaGames.LowPolyShooterPack
             movement = transform.TransformDirection(movement);
 
             #endregion
-            
-            //Update Velocity.
-            Velocity = new Vector3(movement.x, 0.0f, movement.z);
+
+            // Apply the velocity to the rigidbody.
+            rigidBody.velocity = new Vector3(movement.x, rigidBody.velocity.y, movement.z);
         }
 
         /// <summary>
