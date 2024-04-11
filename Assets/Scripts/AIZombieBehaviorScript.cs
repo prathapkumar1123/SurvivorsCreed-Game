@@ -20,12 +20,15 @@ public class AIZombieBehaviorScript : MonoBehaviour
     private int health = 100;
     private bool died = false;
 
+    private ZombieSpawner zombieSpawner;
+
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         animator = GetComponent<Animator>();
         health = initialHealth;
+        zombieSpawner = FindObjectOfType<ZombieSpawner>();
     }
 
     // Update is called once per frame  
@@ -79,6 +82,7 @@ public class AIZombieBehaviorScript : MonoBehaviour
 
     private IEnumerator DestroyObject()
     {
+        if (zombieSpawner != null) zombieSpawner.ZombieKilled();
         agent.enabled = false;
         yield return new WaitForSeconds(deathTimer);
         Destroy(gameObject);
