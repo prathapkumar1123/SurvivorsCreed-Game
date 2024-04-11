@@ -114,4 +114,4 @@ MonoBehaviour:
     type: 3}
   target: {fileID: 0}
   maximumZombies: 30
-  spawnInterval: 1
+  spawnInterval: 10

@@ -955,7 +955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClipWalking: {fileID: 8300000, guid: 74abbbf1b1724e34b894191db38e10a0, type: 3}
   audioClipRunning: {fileID: 8300000, guid: d2add02f58e61e640aba3ae9110591cb, type: 3}
-  jumpForce: 10
+  jumpForce: 7
   speedRunning: 6.8
 --- !u!114 &434113066
 MonoBehaviour:
@@ -1139,38 +1139,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 6bf74daf-8a98-48de-b071-9a4f6efdc3f3
     m_ActionName: Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 434113066}
-        m_TargetAssemblyTypeName: InfimaGames.LowPolyShooterPack.Character, Assembly-CSharp
-        m_MethodName: OnTryThrowGrenade
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: b48c7f02-acf4-4c91-9a97-f85d78b40a00
-    m_ActionName: Player/Grenade[/Keyboard/g,/XInputControllerWindows/leftShoulder]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 434113066}
-        m_TargetAssemblyTypeName: InfimaGames.LowPolyShooterPack.Character, Assembly-CSharp
-        m_MethodName: OnTryMelee
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: ee72309b-00d2-4acf-aa85-8779c255d656
-    m_ActionName: Player/Melee[/Keyboard/f,/XInputControllerWindows/rightStickPress]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 434113066}
